@@ -9,6 +9,8 @@ type: about
 ***
 {% cq %}
 一个好奇的实践者，希望可以通过文字记录反向生产创造力。
+GO GO GO！
+
 
 摩羯座 <i class="fa fa-male" aria-hidden="true"></i>
 
