@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Markdown之使用技巧</title>
+    <url>/2022/02/28/hello-world/</url>
+    <content><![CDATA[<blockquote>
+<p>本篇主要介绍Markdown的几种简单书写方法，后续会不断新增和整理变化  </p>
+</blockquote>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h5 id="标题："><a href="#标题：" class="headerlink" title="标题："></a>标题：</h5><p>一级与六级标题的表达主要是在文字前加井号控制，中间级由添加“#”多少决定。</p>
+ <span id="more"></span>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown</span></span><br><span class="line"><span class="comment">###### Markdown</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p style="font-family: 'Lato','PingFang SC','Microsoft YaHei', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 20px 0 15px;font-size: 1.5em;padding-top: 10px;    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;display: block;"> Markdown </p>
+<p style="font-family: 'Lato','PingFang SC','Microsoft YaHei', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 20px 0 15px;font-size: 1em;padding-top: 10px;       display: block;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;"> Markdown </p>
+
+<hr>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h5 id="字体处理："><a href="#字体处理：" class="headerlink" title="字体处理："></a>字体处理：</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">**Markdown**   加粗</span><br><span class="line">*Markdown*     斜体</span><br><span class="line">***Markdown*** 加粗斜体</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>Markdown</strong><br><em>Markdown</em><br><em><strong>Markdown</strong></em></p>
+<hr>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+
+<h5 id="排序："><a href="#排序：" class="headerlink" title="排序："></a>排序：</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">有序排序</span><br><span class="line">1.Markdown</span><br><span class="line">2.Markdown</span><br><span class="line">3.Markdown</span><br></pre></td></tr></table></figure>
+<hr>
+<ol>
+<li>Markdown</li>
+<li>Markdown</li>
+<li>Markdown</li>
+</ol>
+<hr>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">无序排序</span><br><span class="line">- Markdown</span><br><span class="line">+ Markdown</span><br><span class="line">* Markdown</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>Markdown</li>
+</ul>
+<ul>
+<li>Markdown</li>
+</ul>
+<ul>
+<li>Markdown</li>
+</ul>
+<hr>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h5 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h5><p>注意大括号与百分号之间不能有空格，否则不显示.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] [lang:language] [url] [link text] %&#125; &#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock 测试代码 lang:python https://www.python.org/ Python %&#125;</span><br><span class="line"><span class="built_in">print</span>(“hello world!”) </span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight python"><figcaption><span>测试代码</span><a href="https://www.python.org/">Python</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(“hello world!”) </span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h5 id="笔记块："><a href="#笔记块：" class="headerlink" title="笔记块："></a>笔记块：</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note class_name %&#125; &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">Markdown </span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">Markdown </span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">Markdown </span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">Markdown </span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">Markdown </span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">Markdown </span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<div class="note default">
+            <p>Markdown </p>
+          </div>
+
+<div class="note primary">
+            <p>Markdown </p>
+          </div>
+
+<div class="note success">
+            <p>Markdown </p>
+          </div>
+
+<div class="note info">
+            <p>Markdown </p>
+          </div>
+
+<div class="note warning">
+            <p>Markdown </p>
+          </div>
+
+<div class="note danger">
+            <p>Markdown </p>
+          </div>
+
+<hr>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+]]></content>
+      <categories>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>使用技巧</tag>
+      </tags>
+  </entry>
+</search>
