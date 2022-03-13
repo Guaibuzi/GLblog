@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo的deploy配置如何增加多条git地址</title>
+    <url>/2022/03/13/hexo%E7%9A%84deploy%E9%85%8D%E7%BD%AE%E5%A6%82%E4%BD%95%E5%A2%9E%E5%8A%A0%E5%A4%9A%E6%9D%A1%E5%9C%B0%E5%9D%80/</url>
+    <content><![CDATA[<blockquote>
+<p>本篇主要介绍hexo配置文件《_config.yml》中的deploy的多个git地址写法</p>
+</blockquote>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+
+<p>Hexo提供了快速方便的一键部署功能，只需一条命令就能将网站部署到服务器上。hexo配置文件《_config.yml》中的deploy项就可以解决这个需求。</p>
+<span id="more"></span>
+
+<h1 id="deploy的参数"><a href="#deploy的参数" class="headerlink" title="deploy的参数"></a>deploy的参数</h1><hr>
+<p>type:git<br>repo:库地址<br>branch:分支名称<br>message:自定义提交信息<br>token:Optional token value to authenticate with the repo. Prefix with $ to read token from environment variable</p>
+<hr>
+<h1 id="deploy部署多个git服务器地址的写法"><a href="#deploy部署多个git服务器地址的写法" class="headerlink" title="deploy部署多个git服务器地址的写法"></a>deploy部署多个git服务器地址的写法</h1><p>单个服务器地址：<br>deploy:<br> type: git<br> repo: url</p>
+<p>多个服务器地址：<br>deploy:<br>- type: git<br>  repo: url<br>- type: heroku<br>  repo: url</p>
+<hr>
+<p>deploy:<br>- type: git<br>  repo: git<code>@github.com</code>:Guaibuzi&#x2F;Guaibuzi.github.io.git  #你的仓库地址<br> branch: master<br>- type: git<br>  repo: git<code>@127.0.0.1</code>:&#x2F;home&#x2F;git&#x2F;guaibuzi.git<br>branch: master</p>
+<hr>
+<div class="note primary">
+            <p>多个git地址部署成功的关键在于type前面的 “ - ”。<br>YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。</p>
+          </div>
+
+<h1 id="网站链接"><a href="#网站链接" class="headerlink" title="网站链接"></a>网站链接</h1><blockquote>
+<p>网上找了半天，不如再看一眼官方的文档说明。但是这个“-”，我确实没想到是个关键。</p>
+</blockquote>
+<ul>
+<li>Hexo:<a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>deploy</tag>
+        <tag>使用技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown之使用技巧</title>
     <url>/2022/02/28/hello-world/</url>
     <content><![CDATA[<blockquote>
@@ -105,48 +145,8 @@
         <category>Markdown</category>
       </categories>
       <tags>
+        <tag>使用技巧</tag>
         <tag>Markdown</tag>
-        <tag>使用技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo的deploy配置如何增加多条git地址</title>
-    <url>/2022/03/13/hexo%E7%9A%84deploy%E9%85%8D%E7%BD%AE%E5%A6%82%E4%BD%95%E5%A2%9E%E5%8A%A0%E5%A4%9A%E6%9D%A1%E5%9C%B0%E5%9D%80/</url>
-    <content><![CDATA[<blockquote>
-<p>本篇主要介绍hexo配置文件《_config.yml》中的deploy的多个git地址写法</p>
-</blockquote>
-<hr style="background-color:#8FBC8F;height:4px;border:none;">
-
-
-<p>Hexo提供了快速方便的一键部署功能，只需一条命令就能将网站部署到服务器上。hexo配置文件《_config.yml》中的deploy项就可以解决这个需求。</p>
-<span id="more"></span>
-
-<h1 id="deploy的参数"><a href="#deploy的参数" class="headerlink" title="deploy的参数"></a>deploy的参数</h1><hr>
-<p>type:git<br>repo:库地址<br>branch:分支名称<br>message:自定义提交信息<br>token:Optional token value to authenticate with the repo. Prefix with $ to read token from environment variable</p>
-<hr>
-<h1 id="deploy部署多个git服务器地址的写法"><a href="#deploy部署多个git服务器地址的写法" class="headerlink" title="deploy部署多个git服务器地址的写法"></a>deploy部署多个git服务器地址的写法</h1><p>单个服务器地址：<br>deploy:<br> type: git<br> repo: url</p>
-<p>多个服务器地址：<br>deploy:<br>- type: git<br>  repo: url<br>- type: heroku<br>  repo: url</p>
-<hr>
-<p>deploy:<br>- type: git<br>  repo: git<code>@github.com</code>:Guaibuzi&#x2F;Guaibuzi.github.io.git  #你的仓库地址<br> branch: master<br>- type: git<br>  repo: git<code>@127.0.0.1</code>:&#x2F;home&#x2F;git&#x2F;guaibuzi.git<br>branch: master</p>
-<hr>
-<div class="note primary">
-            <p>多个git地址部署成功的关键在于type前面的 “ - ”。<br>YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。</p>
-          </div>
-
-<h1 id="网站链接"><a href="#网站链接" class="headerlink" title="网站链接"></a>网站链接</h1><blockquote>
-<p>网上找了半天，不如再看一眼官方的文档说明。但是这个“-”，我确实没想到是个关键。</p>
-</blockquote>
-<ul>
-<li>Hexo:<a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>使用技巧</tag>
-        <tag>hexo</tag>
-        <tag>deploy</tag>
       </tags>
   </entry>
 </search>
