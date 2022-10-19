@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo之基础指令</title>
+    <url>/2022/10/09/hexo%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>本篇主要介绍hexo的几种简单指令用法</p>
+</blockquote>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h4 id="new"><a href="#new" class="headerlink" title="new:"></a>new:</h4><p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<span id="more"></span>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br><span class="line"></span><br><span class="line">例如：hexo new <span class="string">&quot;post title with whitespace&quot;</span></span><br><span class="line"></span><br><span class="line">参数	描述</span><br><span class="line">-p,   --path	自定义新文章的路径</span><br><span class="line">-r,   --replace	如果存在同名文章，将其替换</span><br><span class="line">-s,   --slug	文章的 Slug，作为新文章的文件名和发布后的 URL</span><br></pre></td></tr></table></figure>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h4 id="generate"><a href="#generate" class="headerlink" title="generate:"></a>generate:</h4><p>生成静态文件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"></span><br><span class="line">该命令可简写为 hexo g</span><br><span class="line"></span><br><span class="line">选项	描述</span><br><span class="line">-d,   --deploy	文件生成后立即部署网站</span><br><span class="line">-w,   --watch	监视文件变动</span><br><span class="line">-b,   --bail	生成过程中如果发生任何未处理的异常则抛出异常</span><br><span class="line">-f,   --force	强制重新生成文件</span><br><span class="line"></span><br><span class="line">Hexo 引入了差分机制，如果 public 目录存在，那么 hexo g 只会重新生成改动的文件。</span><br><span class="line">使用该参数的效果接近 hexo clean &amp;&amp; hexo generate</span><br></pre></td></tr></table></figure>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h4 id="server"><a href="#server" class="headerlink" title="server:"></a>server:</h4><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line"></span><br><span class="line">选项	描述</span><br><span class="line">-p,   --port	重设端口</span><br><span class="line">-s,   --static	只使用静态文件</span><br><span class="line">-l,   --<span class="built_in">log</span>	启动日记记录，使用覆盖记录格式</span><br></pre></td></tr></table></figure>
+
+
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h4 id="publish"><a href="#publish" class="headerlink" title="publish:"></a>publish:</h4><p>发表草稿。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h4 id="deploy"><a href="#deploy" class="headerlink" title="deploy:"></a>deploy:</h4><p>部署网站。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line"></span><br><span class="line">该命令可简写为 hexo d</span><br><span class="line"></span><br><span class="line">参数	描述</span><br><span class="line">-g,   --generate	部署之前预先生成静态文件</span><br></pre></td></tr></table></figure>
+
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h4 id="clean"><a href="#clean" class="headerlink" title="clean:"></a>clean:</h4><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h4 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿:"></a>显示草稿:</h4><p>显示 source&#x2F;_drafts 文件夹中的草稿文章。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo --draft</span><br></pre></td></tr></table></figure>
+<hr style="background-color:#8FBC8F;height:4px;border:none;">
+
+<h4 id="网站链接"><a href="#网站链接" class="headerlink" title="网站链接"></a>网站链接</h4><blockquote>
+<p>以上就是平时更新文章常用到的几个，更多命令可以查看官方网站</p>
+</blockquote>
+<ul>
+<li>Hexo: <a href="https://hexo.io/zh-cn/docs/commands.html#publish">https://hexo.io/zh-cn/docs/commands.html#publish</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>基础指令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown之使用技巧</title>
     <url>/2022/02/28/hello-world/</url>
     <content><![CDATA[<blockquote>
@@ -144,8 +201,8 @@
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>使用技巧</tag>
         <tag>hexo</tag>
+        <tag>使用技巧</tag>
         <tag>deploy</tag>
       </tags>
   </entry>
